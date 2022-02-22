@@ -31,13 +31,13 @@ while True:
             
     #Tomar un background aleatorio
     ranBG = random.randint(1,BackgroundImageAmount)
-    bg = pygame.image.load(f"C:/Users/pepel/Documents/Tec/tecxotic/imageGenerator/background/{ranBG}.jpeg")
+    bg = pygame.image.load(f"./background/{ranBG}.jpeg")
     bg = pygame.transform.scale(bg, (xlenght, ylenght))
     screen.blit(bg,(0,0))
     
     #Tomar un pez aleatorio
     ranFish = random.randint(1,FishImageAmount)
-    fs = pygame.image.load(f"C:/Users/pepel/Documents/Tec/tecxotic/imageGenerator/fish/{ranFish}.png")
+    fs = pygame.image.load(f"./fish/{ranFish}.png")
     fs = pygame.transform.scale(fs, (fishx,fishy))
     #screen.blit(fs,(0,0))
     ranx = random.randint(0,xlenght-fishx)
@@ -54,5 +54,5 @@ while True:
     
     
 
-    #time.sleep(1)
+    time.sleep(.5)
     pygame.display.update()
